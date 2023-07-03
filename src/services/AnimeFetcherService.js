@@ -10,6 +10,7 @@ const AnimeFetcherService = ({url, queryParams}) => {
             setCurrentPage(page);
         }
         const [selectedImage, setSelectedImage] = useState(null);
+        const [animeItem, setAnimeItem] = useState(null);
         const handleImageClick= (image) => {
             setSelectedImage(image);
             setTimeout(() => {
@@ -110,7 +111,7 @@ const AnimeFetcherService = ({url, queryParams}) => {
                                         <Dialog image={selectedImage} closeModal={() => setModalVisible(false)} />
                                     )} */}
                             {modalVisible && (
-                                <ConfirmationDialog image={selectedImage} closeModal={() => setModalVisible(false)} />
+                                <ConfirmationDialog  image={selectedImage} closeModal={() => setModalVisible(false)} />
                             )}
                         
                         </>
